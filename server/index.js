@@ -44,22 +44,22 @@ app.use(cors(corsOptions));
 
 app.use(passport.initialize());
 
+// Have Node serve the files for our built React app
+/*
+app.use(express.static(path.resolve(__dirname, './client/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
+});
+*/
 app.use("/users", userRouter);
 
 app.get("/", function (req, res) {
   res.send({ status: "success" });
 });
 
-// Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, "./client/build")));
-// All other GET requests not handled before will return our React app
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-});
 
-//Start the server in port 8081
-
-const server = app.listen(process.env.PORT || 8081, function () {
+//Start the server in port 5000
+const server = app.listen(process.env.PORT || 5000, function () {
   const port = server.address().port;
 
   console.log("App started at port:", port);

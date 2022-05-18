@@ -11,23 +11,23 @@
   
       .search-box-container {
         width: 100%;
-        margin: 0 auto;
+        margin: 20px auto;
         background: #ebebeb;
-        padding: 20px 0;
+        padding: 10px 0;
         
         .search-input-container {
           position: relative;
-          width: 450px;
+          width: 400px;
           margin: 0 auto;
   
           .search-input {
-            width: 420px;
+            width: 400px;
             height: 30px;
             line-height: 20px;
             padding: 0 15px;
             border: none;
             border-radius: 3px;
-            border-bottom: 1px solid #cfd0d3;
+            border: 1px solid #2d72d2;
           }
           .search-glass-btn {
             border: none;
@@ -88,10 +88,10 @@
   
     .stock-detail-container {
       max-width: 1425px;
-      min-width: 1024px;
       padding: 0 20px;
       width: 100%;
       margin: 10px auto;
+      text-align:center;
       
       .stock-detail-basic {
         margin-top: 10px;

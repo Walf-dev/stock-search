@@ -14,7 +14,7 @@ function App() {
 
   const [stock, setStock] = useState("");
 
-  //console.log(userContext)
+  //console.log(userContext.token)
   useEffect(() => {
     seeStockDetail(stock);
   }, [stock]);
@@ -74,11 +74,13 @@ function App() {
       </Tabs>
     </Card>
   ) : userContext.token ? (
-    <div className="App">
+    <>
       <Welcome />
-      <SearchInput seeStockDetail={seeStockDetail} selectedStock={stock} />
-      <StockDetail stockSymbol={stock} />
-    </div>
+      <div className="App">
+        <SearchInput seeStockDetail={seeStockDetail} selectedStock={stock} />
+        <StockDetail stockSymbol={stock} />
+      </div>
+    </>
   ) : (
     <Loader />
   );

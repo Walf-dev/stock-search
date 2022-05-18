@@ -1,11 +1,11 @@
 {
-  "name": "stock-search-server",
+  "name": "stock-search",
   "version": "1.0.0",
-  "description": "A node.js server for React stock-search app",
-  "main": "index.js",
+  "description": "A node.js server & React stock-search app",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "build": "cd client && npm install && npm run build ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
